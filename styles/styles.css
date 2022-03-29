@@ -26,7 +26,7 @@ body {
 
 .main {
     display: flex;
-    margin: 4em 10em 4em 10em;
+    margin: 4em 10em 20.45em 10em;
     background-color: #15223890;
     border-radius: 25px;
     border: 2px none
@@ -84,6 +84,33 @@ body {
     margin-top: 0.5em;
 }
 
+.subheader {
+    display: flex;
+    justify-content: center;
+    background: rgb(21,34,56);
+    background: linear-gradient(0deg, rgba(21,34,56,1) 23%, rgba(10,19,38,1) 100%);
+}
+
+.subheader-mainText {
+    padding: 1em;
+    font-size: 2em;
+}
+
+.submain {
+    background-image: url(../resources/suisei-2.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1.1);
+}
+
+.quote {
+    margin: 20em;
+}
+
 .footer {
     background-color: #152238;
     display: flex;
@@ -93,10 +120,7 @@ body {
     font-size: 20px;
     font-weight: 300;
     padding: 16px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
+    margin-top: auto;
 }
 
 ul {
