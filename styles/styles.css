@@ -1,5 +1,6 @@
 * {
     font-family: "Times New Roman", sans-serif;
+    color: #fff;
 }
 
 body {
@@ -23,6 +24,66 @@ body {
     opacity: 0.9;
 }
 
+.main {
+    display: flex;
+    margin: 4em 10em 4em 10em;
+    background-color: #15223890;
+    border-radius: 25px;
+    border: 2px none
+}
+
+.main-left, .main-right {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    flex: 1 0 0;
+    
+}
+
+.foreword {
+    font-size: 34px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.weeb {
+    margin-top: 1em;
+    flex: 1 1 0;
+}
+
+.enlightenment {
+    font-size: 26px;
+    width: 8em;
+    height: 2em;
+    margin: 2em;
+    border-radius: 40px;
+    background-color: #04072790;
+    border: 3px solid rgb(1, 1, 15);
+}
+
+.weeb, .enlightenment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 0.95em;
+    text-decoration-line: underline;
+    margin-top: 0.5em;
+}
+
 .footer {
     background-color: #152238;
     display: flex;
@@ -32,8 +93,10 @@ body {
     font-size: 20px;
     font-weight: 300;
     padding: 16px;
-    opacity: 0.9;
-    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 
 ul {
@@ -47,4 +110,13 @@ ul {
 a {
     text-decoration: none;
     color: #fff
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.center-links {
+    text-decoration-line: underline;
 }
