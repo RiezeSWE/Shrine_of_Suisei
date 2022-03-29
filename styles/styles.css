@@ -7,6 +7,10 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url(../resources/suisei-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 .header {
@@ -24,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 40px;
     font-size: 20px;
     font-weight: 300;
     padding: 16px;
