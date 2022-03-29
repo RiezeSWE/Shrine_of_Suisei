@@ -18,10 +18,22 @@ body {
     background-color: #152238;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 20px;
     font-weight: 300;
-    padding: 16px;
+    padding: 16px 16px 12px 16px;
     opacity: 0.9;
+}
+
+.pog {
+    height: 1.3em;
+    width: 1.3em;
+}
+
+
+.comet {
+    height: 1.3em;
+    width: 1.3em;
 }
 
 .main {
@@ -202,7 +214,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
     padding: 16px;
     margin-top: auto;
