@@ -29,7 +29,7 @@ body {
     margin: 4em 10em 20em 10em;
     background-color: #15223890;
     border-radius: 25px;
-    border: 2px none
+    border: 2px none;
 }
 
 .main-left, .main-right {
@@ -48,6 +48,7 @@ body {
     font-weight: 300;
     text-align: center;
     margin-bottom: 0.3em;
+    font-family: 'kawashiro';
 }
 
 .message {
@@ -228,4 +229,9 @@ img {
 
 .center-links {
     text-decoration-line: underline;
+}
+
+@font-face {
+    font-family: 'kawashiro';
+    src: url('/fonts/KawashiroGothic-Lla5.ttf')
 }
