@@ -134,13 +134,13 @@ body {
 
 .quote {
     margin: 3em 2em 0.2em 2em;
-    text-align: center;
     font-size: 3em;
     background-color: #15223890;
     border-radius: 0.35em;
 }
 
 .quoteSui {
+    text-align: center;
     font-size: 3em;
     background-color: #15223890;
     border-radius: 0.35em;
