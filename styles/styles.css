@@ -26,7 +26,7 @@ body {
 
 .main {
     display: flex;
-    margin: 4em 10em 20.45em 10em;
+    margin: 4em 10em 20em 10em;
     background-color: #15223890;
     border-radius: 25px;
     border: 2px none
@@ -44,28 +44,29 @@ body {
 }
 
 .foreword {
-    font-size: 34px;
+    font-size: 2.2em;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0.3em;
 }
 
 .message {
     display: flex;
     flex-wrap: wrap;
-    font-size: 22px;
+    font-size: 1.37em;
     text-align: justify;
 }
 
 .weeb {
-    margin-top: 1em;
+    font-size: 1.37em;
+    margin-top: 0.3em;
     flex: 1 1 0;
 }
 
 .enlightenment {
-    font-size: 26px;
+    font-size: 1.5em;
     width: 8em;
-    height: 2em;
+    height: 2.5em;
     margin: 2em;
     border-radius: 40px;
     background-color: #04072790;
@@ -149,6 +150,8 @@ body {
 
 .preFooter {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 4em 28em 3em 28em;
     background: rgb(21,34,56);
     background: linear-gradient(0deg, rgba(21,34,56,1) 23%, rgba(10,19,38,1) 100%);
