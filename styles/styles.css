@@ -135,6 +135,7 @@ body {
 .submain {
     background-image: url(../resources/suisei-2.jpg);
     background-size: cover;
+    background-repeat: repeat-y;
     object-fit: cover;
     background-attachment: fixed;
     display: flex;
