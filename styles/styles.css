@@ -8,26 +8,70 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(../resources/suisei-1.jpg);
+    background-image: url(../resources/sui-test.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
 .header {
-    background-color: #152238;
+    background-color: #030c1b90;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.75em;
     font-weight: 900;
     padding: 16px 16px 12px 16px;
-    opacity: 0.9;
 }
 
-.left-links, .right-links {
+.links {
     font-family: "linelgrey";
+    transition: all 0.3s;
+    position: relative;
 }
+  .links span {
+    transition: all 0.3s;
+  }
+  .links::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  .links:hover span {
+    letter-spacing: 2px;
+  }
+  .links:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .links::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .links:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+  
 
 .pog {
     height: 1em;
@@ -43,7 +87,7 @@ body {
 .main {
     display: flex;
     margin: 4em 10em 20em 10em;
-    background-color: #15223890;
+    background-color: #030c1b90;
     border-radius: 25px;
     border: 2px none;
 }
@@ -89,6 +133,56 @@ body {
     border: 3px solid rgb(1, 1, 15);
     font-family: "poppins";
     font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.enlightenment:before {
+    content: '';
+    background: linear-gradient(45deg, #7700ff, #3700ff, #1900ff, #1100ff, #0026ff, #0084ff, #00a2ff, #00ffff, #7700ff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 40px;
+}
+
+.enlightenment:active {
+    color: #000;
+}
+
+.enlightenment:active:after {
+    background: transparent;
+}
+
+.enlightenment:hover:before {
+    opacity: 1;
+}
+
+.enlightenment:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #040727;
+    left: 0;
+    top: 0;
+    border-radius: 40px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 .weeb, .enlightenment {
@@ -110,8 +204,8 @@ body {
 }
 
 .subheader {
-    background: rgb(21,34,56);
-    background: linear-gradient(0deg, rgba(21,34,56,1) 23%, rgba(10,19,38,1) 100%);
+    background: rgb(3,12,27);
+    background: linear-gradient(0deg, rgba(3,12,27,1) 23%, rgba(21,34,56,1) 100%);    
 }
 
 .subheader-mainText {
@@ -144,12 +238,19 @@ body {
 .sub {
     border: 3px solid rgb(211, 223, 231);
     border-radius: 0.5em;
+    box-shadow: 0 10px 30px black;
+    transition: 0.3s;
 }
 
+.pixivImg:hover, .redditImg:hover, .horrorImg:hover, .suicoImg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(2, 96, 173);
+}
 
 .submain {
-    background-image: url(../resources/suisei-2.jpg);
+    background-image: url(../resources/suisei-1.jpg);
     background-size: cover;
+    background-position: center;
     object-fit: cover;
     background-attachment: fixed;
     display: flex;
@@ -160,18 +261,18 @@ body {
 }
 
 .quote {
-    margin: 3em 2em 0.3em 2em;
+    margin: 3em 2em 0 2em;
     font-size: 3em;
-    background-color: #15223890;
     border-radius: 0.35em;
+    text-shadow: 0 0 5px #971414, 0 0 20px #ff7d7d, 0 0 40px #000;
 }
 
 .quoteSui {
     text-align: center;
     font-size: 3em;
-    background-color: #15223890;
+    text-shadow: 0 0 5px #971414, 0 0 20px #ff7d7d, 0 0 40px #000;
     border-radius: 0.35em;
-    margin: 0 3em 6.8em 18em;
+    margin: 0 3em 6.8em 3em;
 }
 
 .preFooter {
@@ -179,8 +280,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 4em 28em 3em 28em;
-    background: rgb(21,34,56);
-    background: linear-gradient(0deg, rgba(21,34,56,1) 23%, rgba(10,19,38,1) 100%);
+    background: rgb(14,30,57);
+    background: linear-gradient(0deg, rgba(14,30,57,1) 23%, rgba(3,12,27,1) 100%);  
 }
 
 .contactPage {
@@ -189,6 +290,7 @@ body {
     padding: 2em;
     border-radius: 1em;
     background-color: rgb(32,32,32);
+    box-shadow: 0 8px 30px black;
 }
 
 .contactBox {
@@ -211,11 +313,10 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    margin: 0 5em 0 5em;;
 }
 
 .contactButton {
-    margin: 1em;
+    margin: 1em 6em 1em 6em;;
     padding: 0.4em 1.8em;
     border-radius: 0.65em;
     background: rgb(21,56,22);
@@ -224,8 +325,13 @@ body {
     font-family: "Sans Serif";
 }
 
+.contactButton:hover {
+    background: rgb(21,56,22);
+    background: linear-gradient(0deg, rgba(35,135,7,1) 23%, rgba(21,56,22,1) 100%);
+}
+
 .footer {
-    background-color: #0b1424;
+    background-color: #010711;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,7 +360,7 @@ img {
     height: auto;
 }
 
-.center-links {
+.website {
     text-decoration-line: underline;
 }
 
