@@ -23,6 +23,11 @@ body {
       }
 }
 
+#header-fixed {
+    width: 100%;
+    position: fixed;
+}
+
 .header {
     background-color: #030c1b90;
     align-items: center;
@@ -30,11 +35,77 @@ body {
     font-weight: 900;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
 .headerContent {
     display: flex;
     justify-content: space-between;
     padding: 16px 16px 12px 16px;
 }
+
+.sourcesContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .sourcesContainer:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .sourcesContent {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #030c1b;
+    border-radius: 5px;
+    width: 30%;
+    position: absolute;
+    transition: all 5s ease-in-out;
+  }
+  
+  .sourcesMain, .sourcesHeader {
+    margin-top: 0;
+    color: #fff;
+    font-size: 0.5em;
+    padding: 1em;
+    font-family: "lumineux";
+  }
+  .sourcesContent .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  .sourcesContent .close:hover {
+    color: #5a0f0f;
+  }
+  .sourcesContent .sourcesMain {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .sourceContent{
+      width: 70%;
+    }
+  }
 
 .links {
     font-family: "linelgrey";
@@ -98,7 +169,7 @@ body {
 
 .main {
     display: flex;
-    margin: 4em 10em 20em 10em;
+    margin: 6em 10em 20em 10em;
     background-color: #030c1b90;
     border-radius: 25px;
     border: 2px none;
